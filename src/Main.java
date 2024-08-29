@@ -48,11 +48,10 @@ public class Main {
         }
 
         System.out.println("Третья задача");
-        int year = 2011;
-        double n;
-        if (year >= 1584 && year % 4 == 0) {
-            System.out.println(year + "год является високосным!");
-        } else if (year >= 1584 && year % 4 != 0){
+        int year = 1600;
+        if ((year >= 1584 && year % 4 == 0 && year % 100 != 0) || (year >= 1584 && year % 400 == 0)) {
+            System.out.println(year + " год является високосным!");
+        } else if ((year >= 1584 && year % 4 != 0 && year % 100 == 0) || (year >= 1584 && year % 400 != 0)){
             System.out.println(year + " год не является високосным!");
         } else {
             System.out.println("Високосный год ещё не был введен");
